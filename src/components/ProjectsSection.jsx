@@ -3,32 +3,33 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "My Well Being App",
+    description:
+      "A Mental Health well being application that conducts surveys and assigns courses to schools.",
+    image: "/projects/image1.png",
+    tags: ["React", "Django", "Django Rest Framework", "PostgreSQL"],
+    demoUrl: "https://deploy.d3h0bvy5mffna0.amplifyapp.com/dashboard",
+    // githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "Customer Relationship Management System",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "CRM system for managing customer interactions, sales tracking, and analytics.",
+    image: "/projects/image2.png",
+    tags: ["Django", "Django Rest Framework", "Tailwind CSS"],
+    // demoUrl: "#",
+    githubUrl: "https://github.com/manya346/django-crm",
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Photo Sharing Platform",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A platform for users to upload, share, and comment on photos.",
+    image: "/projects/image3.png",
+    tags: ["React", "Django", "Django Rest Framework"],
+    // demoUrl: "#",
+    githubUrl: "https://github.com/manya346/photoshare",
   },
 ];
 
@@ -80,14 +81,14 @@ export const ProjectsSection = () => {
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <ExternalLink size={20} />
+                      {project.demoUrl && <ExternalLink size={20} />}
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
-                      <Github size={20} />
+                      {project.githubUrl && <Github size={20} />}
                     </a>
                   </div>
                 </div>
@@ -100,7 +101,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/manya346"
           >
             Check My Github <ArrowRight size={16} />
           </a>
