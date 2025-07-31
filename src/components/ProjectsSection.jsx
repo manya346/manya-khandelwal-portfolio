@@ -9,7 +9,6 @@ const projects = [
     image: "/projects/image1.png",
     tags: ["React", "Django", "Django Rest Framework", "PostgreSQL"],
     demoUrl: "https://deploy.d3h0bvy5mffna0.amplifyapp.com/dashboard",
-    // githubUrl: "#",
   },
   {
     id: 2,
@@ -18,7 +17,6 @@ const projects = [
       "CRM system for managing customer interactions, sales tracking, and analytics.",
     image: "/projects/image2.png",
     tags: ["Django", "Django Rest Framework", "Tailwind CSS"],
-    // demoUrl: "#",
     githubUrl: "https://github.com/manya346/django-crm",
   },
   {
@@ -28,7 +26,6 @@ const projects = [
       "A platform for users to upload, share, and comment on photos.",
     image: "/projects/image3.png",
     tags: ["React", "Django", "Django Rest Framework"],
-    // demoUrl: "#",
     githubUrl: "https://github.com/manya346/photoshare",
   },
 ];
@@ -49,9 +46,12 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
-            <div
+            <a
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              href={project.demoUrl || project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover block focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -74,26 +74,8 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      {project.demoUrl && <ExternalLink size={20} />}
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      {project.githubUrl && <Github size={20} />}
-                    </a>
-                  </div>
-                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
