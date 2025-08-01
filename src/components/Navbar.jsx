@@ -23,20 +23,19 @@ export const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
+        "fixed w-full z-40 transition-all duration-300 bg-background dark:bg-background",
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       )}
     >
       <div className="container flex items-center justify-between">
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-lg sm:text-xl md:text-2xl font-bold text-primary flex items-center"
           href="#hero"
         >
           <span className="relative z-10">
             <span className="text-foreground">Manya Khandelwal</span> Portfolio
           </span>
         </a>
-        {/* {desktop navbar} */}
         <div className="hidden md:flex space-x-8 px-10 py-2">
           {NavItems.map((item, key) => (
             <a
@@ -49,12 +48,10 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* {mobile navbar} */}
-
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="px-10 md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

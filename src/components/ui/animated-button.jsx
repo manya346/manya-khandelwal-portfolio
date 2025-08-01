@@ -5,12 +5,13 @@ export const AnimatedButton = ({
   children,
   className,
   alwaysAnimate = false,
+  as: Component = "button",
   ...props
 }) => {
   const { shouldAnimate } = useThemeAnimations();
 
   return (
-    <button
+    <Component
       className={cn(
         className,
         (alwaysAnimate || shouldAnimate) && "cosmic-button",
@@ -20,6 +21,6 @@ export const AnimatedButton = ({
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
