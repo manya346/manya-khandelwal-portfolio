@@ -2,6 +2,13 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
+  { name: "Data Structures", level: 90, category: "fundamentals" },
+  { name: "Operating Systems", level: 85, category: "fundamentals" },
+  { name: "Database Management Systems", level: 95, category: "fundamentals" },
+  {name: "Computer Networks", level: 80, category: "fundamentals" },
+  { name: "Algorithms", level: 75, category: "fundamentals" },
+  { name: "OOPs", level: 80, category: "fundamentals" },
+
   { name: "Python", level: 85, category: "languages"},
   { name: "Java", level: 70, category: "languages"},
   { name: "C++", level: 65, category: "languages"},
@@ -13,7 +20,7 @@ const skills = [
   { name: "Tailwind CSS", level: 90, category: "frontend" },
 
   { name: "Django", level: 80, category: "backend" },
-  { name: "DFR", level: 75, category: "backend" },
+  { name: "DRF", level: 75, category: "backend" },
   { name: "MySQL", level: 70, category: "backend" },
   { name: "PostgreSQL", level: 65, category: "backend" },
 
@@ -23,7 +30,7 @@ const skills = [
   { name: "VS Code", level: 95, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools", "languages"];
+const categories = ["all", "fundamentals", "languages" , "frontend", "backend", "tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
