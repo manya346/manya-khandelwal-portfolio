@@ -33,7 +33,7 @@ export const AboutSection = () => {
                 Get in Touch
               </a>
               <a
-                href="/manya-resume'25.pdf"
+                href="/manya-khandelwal-resume-25.pdf"
                 download
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colours duration-300"
               >
