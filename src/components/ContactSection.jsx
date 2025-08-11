@@ -64,9 +64,9 @@ export const ContactSection = () => {
             </div>
 
             <div className="flex items-center space-x-6">
-              <div className="p-3 rounded-full bg-primary/10 w-12 h-12 flex items-center justify-center flex-shrink-0">
+              {/* <div className="p-3 rounded-full bg-primary/10 w-12 h-12 flex items-center justify-center flex-shrink-0">
                 <Phone className="h-6 w-6 text-primary" />
-              </div>
+              </div> */}
               <div className="flex flex-col justify-center">
                 <div className="flex items-center space-x-2 mb-1">
                   <h4 className="font-medium">Phone</h4>
